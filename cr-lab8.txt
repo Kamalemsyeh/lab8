@@ -1,0 +1,18 @@
+1 - gcc -c max.c min.c
+2 - ar -crs liboutils.a max.o min.o
+3 - ar -t liboutils.a 
+4 - ranlib liboutils.a --- ranlib sert à 
+8 - sudo mv *.h /opt/includes/
+    sudo mv liboutils.a /opt/lib
+9 - rm *.o max.c min.c
+    gcc main.c -L/opt/lib -I/opt/includes -loutils -o executable
+10- Le code marche très bien
+11- gcc -c var.c
+	sudo ar -r /opt/lib/liboutils.a var.o
+12-	cd /opt/lib
+	ar -t liboutils.a 
+13- sudo ranlib liboutils.a
+    nm liboutils.a 
+14- gcc main.c -L/opt/lib -I/opt/includes -loutils -o executable1
+15- gcc main.c -lm -L/opt/lib -I/opt/includes -loutils -o executable2
+
